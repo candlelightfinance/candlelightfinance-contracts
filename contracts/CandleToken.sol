@@ -5,10 +5,6 @@ import "./libs/BEP20.sol";
 // CandleToken with Governance.
 contract CandleToken is BEP20('Candle', 'CANDLE') {
 
-    // creating pool for large scale burning and initial Airdrop for community building
-    constructor() public {
-        _mint(msg.sender, 10e23);
-    }
 
     /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
